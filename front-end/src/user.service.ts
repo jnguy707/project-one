@@ -6,7 +6,7 @@ class UserService {
     public user = new User();
     
     loginUser(user: User) {
-        console.log('fetch');
+        console.log('fetch user');
         return fetch(`${url}/login`, {
             method: 'POST',
             body: JSON.stringify(user),

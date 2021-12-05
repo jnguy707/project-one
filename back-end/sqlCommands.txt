@@ -1,0 +1,30 @@
+CREATE TABLE users ( 
+id int PRIMARY KEY auto_increment, 
+username varchar(50) UNIQUE NOT NULL, 
+password varchar(128) NOT NULL
+);
+
+CREATE TABLE accounts ( 
+id int PRIMARY KEY auto_increment, 
+balance double CHECK(balance>0),
+type varchar(20) NOT NULL,
+user_id int, FOREIGN KEY(user_id) REFERENCES users(id)
+);
+
+CREATE TABLE transactions ( 
+id int PRIMARY KEY auto_increment, 
+amount double CHECK(amount>0), 
+date DATE NOT NULL, 
+type varchar(20) NOT NULL,
+account_id int, FOREIGN KEY (account_id) REFERENCES accounts(id)
+);
+
+INSERT INTO users (username,password)
+VALUES ('test1@mail.com', 'test1'),('test2@mail.com', 'test2');
+
+INSERT INTO accounts(balance,user_id,type)
+VALUES (9000,1,'CHECKINGS'),(11000,1,'SAVINGS'),(11000,2,'CHECKINGS'),(9000,2,'SAVINGS');
+
+INSERT INTO transactions(amount,date,type,account_id)
+VALUES (1000,'2021-11-30','DEBIT',1),(1000,'2021-11-30','CREDIT',2),
+        (1000,'2021-11-30','CREDIT',3),(1000,'2021-11-30','DEBIT',4);
