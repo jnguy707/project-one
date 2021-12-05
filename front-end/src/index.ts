@@ -106,6 +106,8 @@ inputSubmit.addEventListener('click', async e => {
     if (currentUser.password == candidateUser.password) {
         morphLoginSuccess();
         renderAccounts();
+    } else {
+        alert('Incorrect username or password','danger');
     }
 })
 
