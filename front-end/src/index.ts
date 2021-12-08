@@ -57,7 +57,7 @@ function eleHasClass(element: HTMLElement, classToTest: string) {
 function alert(message: string, type: string) {
     const wrapper = document.createElement('div')
     wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-
+    alertPlaceholder.innerHTML = "";
     alertPlaceholder.append(wrapper);
 }
 
@@ -74,8 +74,10 @@ linkAccount.addEventListener('click', e => {
         transferForm.classList.add('invisible');
         accountViewSection.classList.remove('invisible');
         renderAccounts();
+        alertPlaceholder.innerHTML = "";
     } else {
         renderAccounts();
+        alertPlaceholder.innerHTML = "";
     }
 })
 
@@ -90,8 +92,10 @@ linkTransfer.addEventListener('click', e => {
         transferForm.classList.remove('invisible');
         accountViewSection.classList.add('invisible');
         renderTransferAccounts();
+        alertPlaceholder.innerHTML = "";
     } else {
         renderTransferAccounts();
+        alertPlaceholder.innerHTML = "";
     }
 })
 
@@ -106,6 +110,7 @@ inputSubmit.addEventListener('click', async e => {
     if (currentUser.password == candidateUser.password) {
         morphLoginSuccess();
         renderAccounts();
+        alertPlaceholder.innerHTML = "";
     } else {
         alert('Incorrect username or password','danger');
     }
