@@ -6,13 +6,21 @@ An rudimentary full stack web application that allows users to transfer funds be
 
 ## Technologies Used
 
-*
+* Webpack 5.64.1
+* Webpack DevServer 4.5.0
+* Webpack CLI 4.9.1
+* Bootstrap 5.1
+* TypeScript
+* JPA with Hibernate Core 5.6.1.Final
+* Javalin 4.1.1
+* Slf4j 1.7.31
+* Jackson Databind 2.12.4
 
 ## Features
 
 * Single Page Application
-* Awesome feature 2
-* Awesome feature 3
+* Robust Front-end UI logic for transfer to occur
+* A user is able to view their funds.
 
 ## To-do list:
 * Fix bug on obtaining transfers of a given user.
