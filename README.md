@@ -2,7 +2,7 @@
 
 ## Description
 
-An rudimentary full stack web application that allows users to transfer funds between their own accounts.
+An rudimentary full stack web application that allows users to transfer funds between their own accounts, and have those transfer reflect appropirately.
 
 ## Technologies Used
 
@@ -39,7 +39,7 @@ For the back-end:
 For the front-end
 1) Webpack
 2) Node JS + NPM
-3) A modern web browser
+3) A modern web browser (preferably with V8 support)
 
 After ensuring technologies are acquired and installed correctly. After navigating to your desired directory of cloning, using git:
 
@@ -53,3 +53,4 @@ After cloning:
 4) In your favorite front-end IDE or CMD, ensure the terminal is in dir:``{root}/front-end/``
 5) Enter the command in the terminal, ``npm i`` to install the node_modules
 6) To start the server, enter the command ``npm start``
+7) Once, both applications are running, navigate in your wel
