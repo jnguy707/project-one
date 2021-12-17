@@ -53,4 +53,4 @@ After cloning:
 4) In your favorite front-end IDE or CMD, ensure the terminal is in dir:``{root}/front-end/``
 5) Enter the command in the terminal, ``npm i`` to install the node_modules
 6) To start the server, enter the command ``npm start``
-7) Once, both applications are running, navigate in your wel
+7) Once, both applications are running, navigate in your web browser to `localhost:3000`
