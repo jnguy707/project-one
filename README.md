@@ -22,10 +22,12 @@ An rudimentary full stack web application that allows users to transfer funds be
 
 ## Getting Started
 In order to run this project, you will need certain techonologies installed:
+
 For the back-end:
 1) JRE 17
 2) MySQL
 3) Maven, as this builds and automatically managaes dependencies.
+
 For the front-end
 1) Webpack
 2) Node JS + NPM
